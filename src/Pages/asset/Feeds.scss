@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+.logo{
+    margin-left: 430px;
+    height: 40px;
+}
+
+.avap{
+    border: 2px solid #e36387;
+    margin-left: 10px;
+    box-shadow: -1px 1px 4px 0px rgba(120, 130, 146, 0.5);
+    
+}
+.title{
+    // position: absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #203758;
+}
+.time{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #788292;
+}
+
+.panel{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #788292;
+}
+
+.pub{    
+    width: auto;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    // line-height: 187.4%;
+    color: #203758;
+    .tag{
+        color: #e36387;
+    }
+}
+.comm{
+    display: flex;
+    margin-right: 3px;
+    .ccard{
+        margin-left: 20px;
+        background: #F1F2F6;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .profile{
+        margin-left: 25px;
+    }
+    .coname{
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: 10px;
+        color: #203758;
+    }
+    .cpost{
+        font-size: 14px;
+        font-weight: 400;
+        margin: 4px 10px;
+        color: #203758;
+        
+    }
+}
+.ban{
+    display: flex;
+}
+.card{
+    margin-top: 10px;
+    margin-left: 441px;
+    width: 622px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(241, 242, 246, 1);
+    
+}
+ .mypro{
+    margin-top: 20px;
+    width: 622px;
+    margin-left: 441px;
+    display: inline-block;
+    .myprofile{
+        height: 150px;
+        width: 150px;
+        margin-left: 300px;
+        margin-bottom: 24px;
+        margin-top: 28px;
+    }
+    .myname{
+        position: absolute;
+        width: 181px;
+        height: 19px;
+        margin-left: 460px;
+        top: 98px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #203758;
+
+    }
+    .btn-profile{
+        position: absolute;
+        width: 105px;
+        height: 31px;
+        left: 790px;
+        top: 98px;
+        background: #e36387;
+        border-radius: 6px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        color: #203758;
+    }
+    .exit{
+        width: 24px;
+        height: 24px;
+        left: 869px;
+        
+    }
+
+    .posts{
+        position: absolute;
+        width: 74px;
+        height: 18px;
+        left: 620px;
+        top: 141px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #203758;
+        .fthin{
+            margin-left: 3px;
+            font-weight: 500;
+        }
+    }
+
+    .followers{
+        position: absolute;
+        width: 74px;
+        height: 18px;
+        left: 710px;
+        top: 141px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #203758;
+        .fthin{
+            margin-left: 3px;
+            font-weight: 500;
+        }
+    }
+
+    .following{
+        position: absolute;
+        width: 74px;
+        height: 18px;
+        left: 820px;
+        top: 141px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #203758;
+        margin-right: 25px;
+        .fthin{
+            margin-left: 3px;
+            font-weight: 500;
+        }
+    }
+
+    
+    .bio{
+        position: absolute;
+        width: 443px;
+        height: 77px;
+        left: 620px;
+        top: 170px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 187.4%;
+        color: #203758;
+    }
+ }
+
+.post{
+    text-align: center;
+}
+
+
+.commen{
+    color: #788292;
+
+}
+.txt{
+    color: #203758;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin: auto;
+}
+
+.media{
+    width: 554px;
+    margin: auto;
+    border: 1.5px solid #F1F2F6;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-top: 56.25%; // 16:9
+}
+
+
+
+@media screen and (max-width: 600px){
+    .card{
+        width: 90%;
+        margin: 10px 17px;
+        
+    }
+    .hd{
+        width: 100%;
+        height: 54px;
+    }
+    .logo{
+        margin-left: 0px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .makeStyles-media-4{
+        width: 50%;
+    }
+    .commen{
+        width: 100px;
+    }
+
+    .ban{
+        margin-left: 190px;
+    }
+    
+    .mypro{
+        width: 100%;
+    }
+    
+
+    .media{
+        width: 90%;
+    }
+    .ip{
+        width: 50%;
+        
+    }
+    
+}
+
