@@ -9,6 +9,7 @@ import './App.css';
 import Feeds from './Pages/Feeds';
 import MyProfile from './Pages/MyProfile';
 import FProfile from './Pages/FProfile ';
+import Login from './Pages/login';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -49,7 +50,10 @@ class App extends Component {
               <Route path="/FProfile">
                   <FProfile />
               </Route>
-          </Switch>
+              <Route path="/Login">
+                  <Login />
+              </Route>
+            </Switch>
           </MuiThemeProvider>
         </Router>
       );
