@@ -50,10 +50,10 @@ class App extends Component {
               <Route path="/FProfile">
                   <FProfile />
               </Route>
-              <Route path="/Login">
-                  <Login />
+              <Route path="/login">
+                <Login />
               </Route>
-            </Switch>
+          </Switch>
           </MuiThemeProvider>
         </Router>
       );
