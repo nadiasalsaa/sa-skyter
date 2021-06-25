@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import './asset/Feeds.css'
+import AlertDialogEditProfile from '../component/AlertDialogEditProfile';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import MessageIcon from '@material-ui/icons/Message';
@@ -148,7 +149,7 @@ export default function Cards() {
                         <a className="myname">Peter Parker</a>
                       }
                     action={
-                        <Button variant="contained" className="btn-profile">Edit Profile</Button>        
+                      <AlertDialogEditProfile />        
                     }
                     subheader={
                         <IconButton aria-label="Exit" className="exit">
