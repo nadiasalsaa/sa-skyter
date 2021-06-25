@@ -3,6 +3,10 @@
 .content {
     display: flex;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ddf3f5;
+    text-align: center;
+    
 }
 
 .title-app {
