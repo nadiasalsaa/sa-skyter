@@ -44,7 +44,7 @@ export default function AlertDialogRegister() {
               fullWidth
             />
             <TextField
-              autoFocus
+              
               margin="dense"
               id="email"
               label="Email"
@@ -54,7 +54,7 @@ export default function AlertDialogRegister() {
               fullWidth
             />
             <TextField
-              autoFocus
+              
               margin="dense"
               id="password1"
               label="Kata Sandi"
@@ -64,7 +64,7 @@ export default function AlertDialogRegister() {
               fullWidth
             />
             <TextField
-              autoFocus
+              
               margin="dense"
               id="password2"
               label="Konfirmasi Kata Sandi"

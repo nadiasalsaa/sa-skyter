@@ -1,7 +1,7 @@
 import {Component} from 'react';
-import './login.css';
-import AlertDialogRegister from '../components/AlertDialogRegister';
-import AlertDialogNewPost from '../components/AlertDialogNewPost';
+import './asset/login.css';
+import AlertDialogRegister from '../component/AlertDialogRegister';
+import AlertDialogNewPost from '../component/AlertDialogNewPost';
 
 class Login extends Component {
     constructor(props) {
