@@ -9,6 +9,7 @@ import './App.css';
 import Feeds from './Pages/Feeds';
 import MyProfile from './Pages/MyProfile';
 import FProfile from './Pages/FProfile ';
+import Notification from './Pages/Notification';
 import Login from './Pages/login';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -52,6 +53,9 @@ class App extends Component {
               </Route>
               <Route path="/login">
                 <Login />
+              </Route>
+              <Route path="/Notif">
+                <Notification />
               </Route>
           </Switch>
           </MuiThemeProvider>

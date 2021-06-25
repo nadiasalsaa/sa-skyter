@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 .logo {
   margin-left: 430px;
   height: 40px;
@@ -42,7 +42,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 187.4%;
   color: #203758;
 }
 
@@ -228,12 +227,31 @@
   color: #788292;
 }
 
-.content {
+.txt {
   color: #203758;
   font-size: 14px;
   font-weight: 400;
   text-align: left;
   margin: auto;
+}
+
+.nametif {
+  width: 196px;
+  height: 16px;
+  left: 688px;
+  top: 103px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.notify {
+  width: 196px;
+  height: 16px;
+  top: 103px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .media {
@@ -271,7 +289,6 @@
   }
   .mypro {
     width: 100%;
-    margin: 0px;
   }
   .media {
     width: 90%;
