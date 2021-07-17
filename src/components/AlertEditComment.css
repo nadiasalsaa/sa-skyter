@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-.akun-baru-button {
-    background-color: #e36387;
+.edit-comment-button {
+    background-color: white;
     border-style: none;
-    color: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
-    padding: 10px 50px;
-    margin: 10px auto;
+    padding: 5px 0px !important;
+    width: 130px;
+    margin-right: 370px !important;
     cursor: pointer;
 }
 
@@ -13,7 +14,7 @@
     display: flex;
 }
 
-.register-button {
+.post-button {
     background-color: #63e363;
     border-style: none;
     color: white;
@@ -31,12 +32,19 @@
     font-family: 'Poppins', sans-serif;
     padding: 5px 20px;
     margin-bottom: 20px;
+    margin-left: 20px;
     cursor: pointer;
+}
+
+.form-dialog-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
 }
 
 @media only screen and (max-width: 768px) {
     /* For mobile */
-    .register-button {
+    .post-button {
         padding: 5px 30px;
         margin-right: 10px;
     }
