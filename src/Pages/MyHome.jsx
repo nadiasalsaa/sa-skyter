@@ -6,7 +6,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import './asset/Feeds.css'
-import AlertDialogEditProfile from '../component/AlertDialogEditProfile';
+import AlertDialogEditProfile from '../components/AlertDialogEditProfile';
+import AlertEditComment from '../components/AlertEditComment';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import MessageIcon from '@material-ui/icons/Message';
@@ -372,11 +373,8 @@ export default function Cards() {
               },
             }}
           >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
+            <AlertEditComment />
+            <MenuItem>Hapus Komentar</MenuItem>
           </Menu>
 
       </div>
@@ -411,11 +409,8 @@ export default function Cards() {
               },
             }}
           >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
+            <AlertEditComment />
+            <MenuItem>Hapus Komentar</MenuItem>
           </Menu>
 
       </div>
@@ -450,11 +445,8 @@ export default function Cards() {
               },
             }}
           >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
+            <AlertEditComment />
+            <MenuItem>Hapus Komentar</MenuItem>
           </Menu>
 
       </div>

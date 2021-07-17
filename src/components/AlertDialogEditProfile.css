@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-.akun-baru-button {
+.edit-profil-button {
     background-color: #e36387;
     border-style: none;
     color: white;
     font-family: 'Poppins', sans-serif;
     padding: 5px 0px !important;
     width: 130px;
-    margin-right: 370px;
+    margin-right: 370px !important;
     cursor: pointer;
 }
 

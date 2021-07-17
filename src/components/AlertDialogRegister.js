@@ -12,6 +12,12 @@ import './AlertDialogRegister.css';
 
 export default function AlertDialogRegister() {
   const [open, setOpen] = React.useState(false);
+  const [data_register, setDataRegister] = React.useState({
+    nama: "",
+    email: "",
+    password1: "",
+    password2: "",
+  });
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -20,6 +26,15 @@ export default function AlertDialogRegister() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleChangeDataRegister = (event) => {
+    const { value, id } = event.target;
+    setDataRegister({...data_register, [id]:value});
+  }
+
+  const submitRegister = () => {
+    alert("nama: " + data_register.nama + ", email: " + data_register.email + ", password: " + data_register.password1 + ", konfirmasi password: " + data_register.password2);
+  }
 
   return (
     <div>
@@ -36,9 +51,10 @@ export default function AlertDialogRegister() {
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              id="nama"
               label="Nama"
               type="text"
+              onChange={handleChangeDataRegister}
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
@@ -49,6 +65,7 @@ export default function AlertDialogRegister() {
               id="email"
               label="Email"
               type="email"
+              onChange={handleChangeDataRegister}
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
@@ -59,6 +76,7 @@ export default function AlertDialogRegister() {
               id="password1"
               label="Kata Sandi"
               type="password"
+              onChange={handleChangeDataRegister}
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
@@ -69,6 +87,7 @@ export default function AlertDialogRegister() {
               id="password2"
               label="Konfirmasi Kata Sandi"
               type="password"
+              onChange={handleChangeDataRegister}
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
@@ -78,7 +97,7 @@ export default function AlertDialogRegister() {
             <button onClick={handleClose} className="cancel-button" color="primary">
               Batal
             </button>
-            <button onClick={handleClose} className="register-button" color="primary">
+            <button onClick={() => submitRegister()} className="register-button" color="primary">
               Buat Akun Baru
             </button>
           </DialogActions>
