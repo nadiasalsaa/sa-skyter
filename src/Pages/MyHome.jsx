@@ -21,8 +21,10 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
+import { useHistory } from 'react-router-dom';
+import AlertDialogNewPost from '../components/AlertDialogNewPost';
+import AlertDialogEditProfile from '../components/AlertDialogEditProfile';
+import AlertLike from '../components/AlertLike';
 
 
 
@@ -138,23 +140,36 @@ export default function Cards() {
 
   const ITEM_HEIGHT = 48;
 
+  let history = useHistory();
+  const redirect = () => {
+    history.push('/login')
+  }
+
+  let link = useHistory();
+  const friend = () => {
+    link.push('/fprofile')
+  }
+
   return (
     <div>
           <Container className="mypro">
-              <Avatar aria-label="ava" className="myprofile" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium"></Avatar>
+              <Avatar aria-label="ava" className="myprofile" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
               <div>
                   <CardHeader 
                     title={
                         <a className="myname">Peter Parker</a>
                       }
                     action={
-                        <Button variant="contained" className="btn-profile">Edit Profile</Button>        
+                      <div>
+                        <AlertDialogEditProfile/>        
+                        <button 
+                            variant="contained" 
+                            className="btn-logout" 
+                            onClick={redirect}
+                        > Logout </button>
+                      </div>
                     }
-                    subheader={
-                        <IconButton aria-label="Exit" className="exit">
-                            <ExitToAppIcon />
-                        </IconButton>
-                    }
+                    
 
                   ></CardHeader>
               </div>
@@ -177,25 +192,11 @@ export default function Cards() {
               </a>
           </Container>
           
-          <Card className="card">
-            <CardHeader className="post"
-                action={
-                  <IconButton aria-label="settings">
-                    <ArrowUpwardIcon />
-                  </IconButton>
-                  
-                }
-                
-              subheader={
-                <a className="time">What's on you mind, Paul?</a>
-              }
-              
-                />
-          </Card>
+          <AlertDialogNewPost/>
           <Card className="card">
             <CardHeader
               avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium">
+                <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
                   
                 </Avatar>
               }
@@ -225,9 +226,7 @@ export default function Cards() {
                 className={classes.like} 
                 aria-label="fav"
                 >
-                <Badge badgeContent={4}>
-                  <FavoriteIcon />
-                </Badge>
+                <AlertLike/>
               </IconButton>
               <IconButton 
                   className={classes.comment} 
@@ -252,7 +251,7 @@ export default function Cards() {
       <Card className="card">
       <CardHeader
         avatar={
-          <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium">
+          <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
             
           </Avatar>
         }
@@ -341,7 +340,7 @@ export default function Cards() {
       </CardActions>
       
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/E1wRIqMVoAkbtad?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://i1.wp.com/www.alphr.com/wp-content/uploads/2020/12/Facebook-How-to-Change-Profile-Picture.jpg?fit=1200%2C666&ssl=1"></Avatar>
           <div className="ccard">
               <p className="coname">
                 Mary Jane Watson 
@@ -380,7 +379,7 @@ export default function Cards() {
 
       </div>
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/ExU43QnVEAEEYC6?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?size=626&ext=jpg"></Avatar>
           <div className="ccard">
               <p className="coname">
                   James Lee  
@@ -419,7 +418,7 @@ export default function Cards() {
 
       </div>
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/E0R9mQxVEAEydz6?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/half-profile-beautiful-redhead-girl-with-healthy-freckled-skin-hair-bun-smiling_273609-9363.jpg?size=626&ext=jpg"></Avatar>
           <div className="ccard">
               <p className="coname">
                 Miles Morales  
@@ -462,7 +461,7 @@ export default function Cards() {
         <CardHeader className="commen"
           avatar={
             
-            <Avatar aria-label="ava" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium"></Avatar>
+            <Avatar aria-label="ava" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
           }
           subheader={
             <BootstrapInput placeholder="Tulis komentar kamu.."  id="bootstrap-input" className="ip" />
@@ -476,7 +475,7 @@ export default function Cards() {
       <Card className="card">
             <CardHeader
               avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium">
+                <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
                   
                 </Avatar>
               }

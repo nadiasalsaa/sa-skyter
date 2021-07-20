@@ -9,6 +9,8 @@ import './App.css';
 import Feeds from './Pages/Feeds';
 import MyProfile from './Pages/MyProfile';
 import FProfile from './Pages/FProfile ';
+import Notification from './Pages/Notification';
+import Login from './Pages/login';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -43,11 +45,17 @@ class App extends Component {
               <Route exact path="/">
                   <Feeds />
               </Route>
-              <Route path="/MyProfile">
+              <Route path="/myprofile">
                   <MyProfile />
               </Route>
-              <Route path="/FProfile">
+              <Route path="/fprofile">
                   <FProfile />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/notif">
+                  <Notification />
               </Route>
           </Switch>
           </MuiThemeProvider>

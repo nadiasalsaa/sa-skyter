@@ -20,8 +20,8 @@ import InputBase from '@material-ui/core/InputBase';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AlertFollow from '../components/AlertFollow';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -130,6 +130,10 @@ export default function Cards() {
     setAnchorEl(event.currentTarget);
   };
 
+  let link = useHistory();
+  const friend = () => {
+    link.push('/fprofile')
+  }
   
 
   const handleClose = () => {
@@ -141,32 +145,19 @@ export default function Cards() {
   return (
     <div>
           <Container className="mypro">
-              <Avatar aria-label="ava" className="myprofile" src="https://pbs.twimg.com/media/E3W8brwVcAId_DH?format=jpg&name=large"></Avatar>
+              <Avatar aria-label="ava" className="myprofile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ZS9dWbRgBWD8bpcEU7FVfjQOICj3FBhsQ&usqp=CAU"></Avatar>
               <div>
                   <CardHeader 
                     title={
                         <a className="myname">Spiderman</a>
                       }
                     action={
-                        <Button variant="contained" className="btn-profile">Follow</Button>        
+                        <AlertFollow/>       
                     }
                     
                   ></CardHeader>
               </div>
-              <div className={classes.margin}>
-                <a className="posts" >
-                    364 
-                    <a className="fthin">posts</a>
-                </a>
-                <a className="followers" >
-                    2M 
-                    <a className="fthin">followers</a>
-                </a>
-                <a className="following" >
-                    16
-                    <a className="fthin">following</a>
-                </a>
-              </div>
+              
               <a className="bio" >
                 Your friendly neighborhood spiderman!
               </a>
@@ -176,7 +167,7 @@ export default function Cards() {
           <Card className="card">
             <CardHeader
               avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/E3W8brwVcAId_DH?format=jpg&name=large">
+                <Avatar aria-label="ava" className={classes.avatar} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ZS9dWbRgBWD8bpcEU7FVfjQOICj3FBhsQ&usqp=CAU">
                   
                 </Avatar>
               }
@@ -233,7 +224,7 @@ export default function Cards() {
       <Card className="card">
       <CardHeader
         avatar={
-          <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/E3W8brwVcAId_DH?format=jpg&name=large">
+          <Avatar aria-label="ava" className={classes.avatar} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ZS9dWbRgBWD8bpcEU7FVfjQOICj3FBhsQ&usqp=CAU">
             
           </Avatar>
         }
@@ -322,7 +313,7 @@ export default function Cards() {
       </CardActions>
       
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/E1wRIqMVoAkbtad?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://i1.wp.com/www.alphr.com/wp-content/uploads/2020/12/Facebook-How-to-Change-Profile-Picture.jpg?fit=1200%2C666&ssl=1"></Avatar>
           <div className="ccard">
               <p className="coname">
                 Mary Jane Watson 
@@ -361,7 +352,7 @@ export default function Cards() {
 
       </div>
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/ExU43QnVEAEEYC6?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?size=626&ext=jpg"></Avatar>
           <div className="ccard">
               <p className="coname">
                   James Lee  
@@ -400,7 +391,7 @@ export default function Cards() {
 
       </div>
       <div className="comm">
-          <Avatar aria-label="ava" className="profile" src="https://pbs.twimg.com/media/E0R9mQxVEAEydz6?format=jpg&name=large"></Avatar>
+          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/half-profile-beautiful-redhead-girl-with-healthy-freckled-skin-hair-bun-smiling_273609-9363.jpg?size=626&ext=jpg"></Avatar>
           <div className="ccard">
               <p className="coname">
                 Miles Morales  
@@ -443,7 +434,7 @@ export default function Cards() {
         <CardHeader className="commen"
           avatar={
             
-            <Avatar aria-label="ava" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium"></Avatar>
+            <Avatar aria-label="ava" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
           }
           subheader={
             <BootstrapInput placeholder="Tulis komentar kamu.."  id="bootstrap-input" className="ip" />
@@ -457,7 +448,7 @@ export default function Cards() {
       <Card className="card">
             <CardHeader
               avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://pbs.twimg.com/media/E3W8brwVcAId_DH?format=jpg&name=large">
+                <Avatar aria-label="ava" className={classes.avatar} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ZS9dWbRgBWD8bpcEU7FVfjQOICj3FBhsQ&usqp=CAU">
                   
                 </Avatar>
               }
