@@ -11,7 +11,7 @@
 }
 
 .skyter-title {
-    margin-right: 220px;
+    margin-left: 260px;
     font-size: 48px;
     color: #6fcced;
 }
@@ -24,7 +24,7 @@
 
 .form-login-box {
     width: 25%;
-    height: 53%;
+    height: 57%;
     background-color: white;
     margin-top: 200px;
     border-radius: 10px;
@@ -127,7 +127,7 @@
     .form-login-box {
         margin-top: 30px;
         width: 320px;
-        height: 380px;
+        height: 420px;
         margin-left: 15px;
         padding-top: 1px;
         padding-bottom: 10px;

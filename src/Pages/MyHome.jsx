@@ -120,7 +120,7 @@ const myprofiles = [
   'Edit Post',
   'Delete Post',
 ]
-export default function Cards() {
+const MyHome = (props) => {
     
   const classes = useStyles();
 
@@ -140,20 +140,21 @@ export default function Cards() {
 
   const ITEM_HEIGHT = 48;
 
-  let history = useHistory();
-  const redirect = () => {
-    history.push('/login')
-  }
+  
 
   let link = useHistory();
   const friend = () => {
     link.push('/fprofile')
   }
+  let go = useHistory();
+  const me = () => {
+    go.push('/myprofile')
+  }
 
   return (
     <div>
-          <Container className="mypro">
-              <Avatar aria-label="ava" className="myprofile" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
+          {/* <Container className="mypro"> */}
+              {/* <Avatar aria-label="ava" className="myprofile" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
               <div>
                   <CardHeader 
                     title={
@@ -172,8 +173,8 @@ export default function Cards() {
                     
 
                   ></CardHeader>
-              </div>
-              <div className={classes.margin}>
+              </div> */}
+              {/* <div className={classes.margin}>
                 <a className="posts" >
                     364 
                     <a className="fthin">posts</a>
@@ -190,311 +191,132 @@ export default function Cards() {
               <a className="bio" >
                 Kadang mengganggu jika digigit
               </a>
-          </Container>
+          </Container> */}
           
-          <AlertDialogNewPost/>
+          
+          
           <Card className="card">
-            <CardHeader
-              avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
+                <CardHeader
+                avatar={
+                    <Avatar 
+                        onClick={friend} 
+                        aria-label="ava" 
+                        className="pp" 
+                        src={props.author_avatar}>
+                    </Avatar>
+                }
+                
+                title={
+                    <a className="title">{props.author_name}</a>
+                }
+                
+                
+                subheader={
+                    <a className="time">{props.created_time}</a>
+                }
+                />
+                <CardContent className="txt">
+                    <a className="pub" >
+                    {props.content_text}
+                    </a>
+                </CardContent>
+                <CardMedia
+                    className="media"
+                    image={props.content_image}
+                />
+                <CardActions disableSpacing>
+                    <IconButton 
+                    className="fav" 
+                    aria-label="fav"
+                    >
+                    <AlertLike/>
+                    </IconButton>
+                    <IconButton 
+                        className="comment" 
+                        aria-label="comment"
+                    >
+                        <Badge badgeContent={props.comments_count}>
+                        <MessageIcon />
+                        </Badge>
+                    </IconButton>
+                    
+                    <IconButton 
+                        className="Share" 
+                        aria-label="Share"
+                    >
+                        <Badge badgeContent={props.shares_count}>
+                        <ShareIcon />
+                        </Badge>
+                    </IconButton>
+
+                </CardActions>
+                {props.comments.map((com) =>
+                
+                <div className="comm">
+                    <Avatar 
+                        aria-label="ava" 
+                        onClick={friend} 
+                        className="profile" 
+                        src={com.comment_avatar}></Avatar>
+                    <div className="ccard">
+                        <p className="coname">
+                            {com.comment_name} 
+                        </p>
+                        <p className="cpost">{com.comment}</p>
+                    </div>
+                    <IconButton
+                        aria-label="more"
+                        // aria-controls="long-menu"
+                        aria-haspopup="true"
+                        onClick={handleClick}
+                        >
+                        <MoreHorizIcon/>
+                    </IconButton>
+
+                    <Menu
+                        id="long-menu"
+                        anchorEl={anchorEl}
+                        keepMounted
+                        open={open}
+                        onClose={handleClose}
+                        PaperProps={{
+                        style: {
+                            maxHeight: ITEM_HEIGHT * 4.5,
+                            width: '20ch',
+                        },
+                        }}
+                    >
+                        {options.map((option) => (
+                        <MenuItem key={option}  onClick={handleClose}>
+                            {option}
+                        </MenuItem>
+                        ))}
+                    </Menu>
+
+                </div>
+                )}
+                    <FormControl className={classes.margin}>
+                    <CardHeader className="commen"
+                    avatar={
+                        
+                        <Avatar 
+                          aria-label="ava" 
+                          src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"
+                          onClick={me} 
+                        ></Avatar>
+                    }
+                    subheader={
+                        <BootstrapInput placeholder="Tulis komentar kamu.."  id="bootstrap-input" className="ip" />
+                    }
+                    
+                    />
+                    </FormControl>
                   
-                </Avatar>
-              }
-              action={
-                <IconButton aria-label="settings">
-                  <MoreHorizIcon />
-                </IconButton>
-              }
-              title={
-                <a className="title">Peter Parker</a>
-              }
-              
-              
-              subheader={
-                <a className="time">45 mins ago</a>
-              }
-            />
-            <CardContent className="txt">
-              <a className="pub" >
-                Being a father is sometimes my hardest but always my most rewarding job.
-                <br/> 
-                Happy Father's Day to all dads out there.
-              </a>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton 
-                className={classes.like} 
-                aria-label="fav"
-                >
-                <AlertLike/>
-              </IconButton>
-              <IconButton 
-                  className={classes.comment} 
-                  aria-label="comment"
-                >
-                  <Badge badgeContent={4}>
-                    <MessageIcon />
-                  </Badge>
-              </IconButton>
-              <IconButton 
-                  className={classes.share} 
-                  aria-label="Share"
-                >
-                  <Badge badgeContent={4}>
-                    <ShareIcon />
-                  </Badge>
-              </IconButton>
-              
-            </CardActions>
-          </Card>
-
-      <Card className="card">
-      <CardHeader
-        avatar={
-          <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
-            
-          </Avatar>
-        }
-        action={
-          <div>
-              <IconButton
-                aria-label="more"
-                // aria-controls="long-menu"
-                aria-haspopup="true"
-                onClick={handleClick}
-                >
-                <MoreHorizIcon/>
-            </IconButton>
-
-            <Menu
-                id="long-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={open}
-                onClose={handleClose}
-                PaperProps={{
-                style: {
-                    maxHeight: ITEM_HEIGHT * 4.5,
-                    width: '20ch',
-                },
-                }}
-            >
-                {myprofiles.map((myprofile) => (
-                <MenuItem key={myprofile}  onClick={handleClose}>
-                    {myprofile}
-                </MenuItem>
-                ))}
-            </Menu>
-          </div>
-
-          
-        }
-        title={
-          <a className="title">Peter Parker</a>
-        }
-        
-        
-        subheader={
-          <a className="time">June 21, 12:45pm</a>
-        }
-        
-      />
-      <CardContent className="txt">
-        <a className="pub" >
-          Having fun while cooking and eating variety of foods with <span></span> 
-          <a className="tag">@Sarah</a>
-        </a >
-      </CardContent>
-      <CardMedia
-        className="media"
-        image={sl2}
-        title="Paella dish"
-      />
-      <CardActions disableSpacing>
-        <IconButton 
-          className={classes.like} 
-          aria-label="fav"
-          >
-          <Badge badgeContent={4}>
-            <FavoriteIcon />
-          </Badge>
-        </IconButton>
-        <IconButton 
-            className={classes.comment} 
-            aria-label="comment"
-          >
-            <Badge badgeContent={4}>
-              <MessageIcon />
-            </Badge>
-        </IconButton>
-        
-        <IconButton 
-            className={classes.share} 
-            aria-label="Share"
-          >
-            <Badge badgeContent={4}>
-              <ShareIcon />
-            </Badge>
-        </IconButton>
-
-      </CardActions>
-      
-      <div className="comm">
-          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://i1.wp.com/www.alphr.com/wp-content/uploads/2020/12/Facebook-How-to-Change-Profile-Picture.jpg?fit=1200%2C666&ssl=1"></Avatar>
-          <div className="ccard">
-              <p className="coname">
-                Mary Jane Watson 
-              </p>
-              <p className="cpost">Itu gimana cara masaknya gan?</p>
-              
-          </div>
-          <IconButton
-            aria-label="more"
-            // aria-controls="long-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-            >
-              <MoreHorizIcon/>
-          </IconButton>
-
-          <Menu
-            id="long-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={open}
-            onClose={handleClose}
-            PaperProps={{
-              style: {
-                maxHeight: ITEM_HEIGHT * 4.5,
-                width: '20ch',
-              },
-            }}
-          >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
-
-      </div>
-      <div className="comm">
-          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?size=626&ext=jpg"></Avatar>
-          <div className="ccard">
-              <p className="coname">
-                  James Lee  
-              </p>
-              <p className="cpost">Kayanya gampang deh...cek dulu di youtube</p>
-              
-          </div>
-          <IconButton
-            aria-label="more"
-            // aria-controls="long-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-            >
-              <MoreHorizIcon/>
-          </IconButton>
-
-          <Menu
-            id="long-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={open}
-            onClose={handleClose}
-            PaperProps={{
-              style: {
-                maxHeight: ITEM_HEIGHT * 4.5,
-                width: '20ch',
-              },
-            }}
-          >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
-
-      </div>
-      <div className="comm">
-          <Avatar aria-label="ava" onClick={friend} className="profile" src="https://img.freepik.com/free-photo/half-profile-beautiful-redhead-girl-with-healthy-freckled-skin-hair-bun-smiling_273609-9363.jpg?size=626&ext=jpg"></Avatar>
-          <div className="ccard">
-              <p className="coname">
-                Miles Morales  
-              </p>
-              <p className="cpost">Ikutan dong, mau buat juga</p>
-              
-          </div>
-          <IconButton
-            aria-label="more"
-            // aria-controls="long-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-            >
-              <MoreHorizIcon/>
-          </IconButton>
-
-          <Menu
-            id="long-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={open}
-            onClose={handleClose}
-            PaperProps={{
-              style: {
-                maxHeight: ITEM_HEIGHT * 4.5,
-                width: '20ch',
-              },
-            }}
-          >
-            {options.map((option) => (
-              <MenuItem key={option}  onClick={handleClose}>
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
-
-      </div>
-
-      <FormControl className={classes.margin}>
-        <CardHeader className="commen"
-          avatar={
-            
-            <Avatar aria-label="ava" src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg"></Avatar>
-          }
-          subheader={
-            <BootstrapInput placeholder="Tulis komentar kamu.."  id="bootstrap-input" className="ip" />
-          }
-          
-        />
-        </FormControl>
-      
-      </Card>
-
-      <Card className="card">
-            <CardHeader
-              avatar={
-                <Avatar aria-label="ava" className={classes.avatar} src="https://i.pinimg.com/474x/9e/78/31/9e78311e090612ccc81c766a6b92773f.jpg">
-                  
-                </Avatar>
-              }
-              action={
-                <IconButton aria-label="settings">
-                  <MoreHorizIcon />
-                </IconButton>
-              }
-              title={
-                <a className="title">Peter Parker</a>
-              }
-              
-              
-              subheader={
-                <a className="time">June 21, 11:30am</a>
-              }
-            />
       </Card>
     </div>
 
   );
 }
+
+
+export default MyHome

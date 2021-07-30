@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React,{useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,19 +30,21 @@ const theme = createMuiTheme({
   });
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
+function App () {
+  // const [token, setToken] = useState();
 
-    render() {
+  // if(!token){
+  //   return <Login setToken={setToken}/>
+  // }
+    
+      
       return (
         <Router>
           <MuiThemeProvider theme={theme}>
             <Switch>
-              <Route exact path="/">
+              <Route 
+                path="/feeds"
+                >
                   <Feeds />
               </Route>
               <Route path="/myprofile">
@@ -51,7 +53,7 @@ class App extends Component {
               <Route path="/fprofile">
                   <FProfile />
               </Route>
-              <Route path="/login">
+              <Route exact path="/">
                 <Login />
               </Route>
               <Route path="/notif">
@@ -62,6 +64,6 @@ class App extends Component {
         </Router>
       );
     }
-}
+
 
 export default App;

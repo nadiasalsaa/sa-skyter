@@ -24,6 +24,17 @@ export default function AlertDialogNewPost() {
     setOpen(false);
   };
 
+  // const handleSubmit = () => {
+  //   const [posts, id] = React.useState(true);
+  //   const url = id ? `http://localhost:3030/posts/${id}` : "http://localhost:3030/posts"; 
+  //   fetch(url, {
+  //     method: id ? "PUT" : "POST",
+  //     nody: JSON.stringify({
+  //       posts: posts
+  //     }),
+  //   }).then(response => response.json())
+  //   .then(json => console.log(json))
+  // }
   return (
     <div>
       {/* <button className="akun-baru-button" variant="outlined" color="primary" onClick={handleClickOpen}>
@@ -59,6 +70,7 @@ export default function AlertDialogNewPost() {
               fullWidth
               multiline
               rows={4}
+              
             />
             <input type="file" id="img" name="img" accept="image/*" />
           </DialogContent>
@@ -66,7 +78,7 @@ export default function AlertDialogNewPost() {
             <button onClick={handleClose} className="cancel-button" color="primary">
               Batal
             </button>
-            <button onClick={handleClose} className="post-button" color="primary">
+            <button  className="post-button" color="primary">
               Post
             </button>
           </DialogActions>

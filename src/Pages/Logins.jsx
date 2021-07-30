@@ -2,7 +2,6 @@ import {Component} from 'react';
 import './asset/login.css';
 import AlertDialogRegister from '../components/AlertDialogRegister';
 import AlertDialogNewPost from '../components/AlertDialogNewPost';
-import AlertRedirect from '../components/AlertRedirect';
 
 class Login extends Component {
     constructor(props) {
@@ -84,13 +83,12 @@ class Login extends Component {
                                     className="input-login input-password" 
                                     onChange={this.handleChangeDataLogin} 
                                     value={this.state.data_login.password} />
-                                {/* <input 
+                                <input 
                                     type="submit" 
                                     value="Masuk" 
                                     className="submit-login-btn" 
-                                    /> */}
+                                    />
                                      {/* onClick={() => this.submitLogin(this.state.data_login.email, this.state.data_login.password)} */}
-                                <AlertRedirect/>
                         </form>
                         <p style={{fontSize: 12}, {textAlign:'center'}}>atau</p>
                         <button className="btn-facebook" style={{marginLeft:45}}>Masuk Facebook <i class="fa fa-facebook-f"></i></button><br />

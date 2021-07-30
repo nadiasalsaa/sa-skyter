@@ -40,7 +40,7 @@ export default function Header() {
         <div className={classes.grow}>
             <AppBar position="static" background-color="#6fcced" className="hd">
                 <Toolbar>
-                 <Link to="/">
+                 <Link to="/feeds">
                     <img src={logo} alt="logo" className="logo" />
                  </Link>   
                 <div className={classes.grow} />

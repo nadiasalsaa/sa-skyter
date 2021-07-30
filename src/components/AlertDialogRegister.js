@@ -13,10 +13,10 @@ import './AlertDialogRegister.css';
 export default function AlertDialogRegister() {
   const [open, setOpen] = React.useState(false);
   const [data_register, setDataRegister] = React.useState({
-    nama: "",
+    author_name: "",
     email: "",
-    password1: "",
-    password2: "",
+    password: "",
+    
   });
 
   const handleClickOpen = () => {
@@ -33,7 +33,7 @@ export default function AlertDialogRegister() {
   }
 
   const submitRegister = () => {
-    alert("nama: " + data_register.nama + ", email: " + data_register.email + ", password: " + data_register.password1 + ", konfirmasi password: " + data_register.password2);
+    alert("author_name: " + data_register.author_name + ", email: " + data_register.email + ", password: " + data_register.password );
   }
 
   return (
@@ -51,8 +51,8 @@ export default function AlertDialogRegister() {
             <TextField
               autoFocus
               margin="dense"
-              id="nama"
-              label="Nama"
+              id="author_name"
+              label="author_name"
               type="text"
               onChange={handleChangeDataRegister}
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
@@ -73,7 +73,7 @@ export default function AlertDialogRegister() {
             <TextField
               
               margin="dense"
-              id="password1"
+              id="password"
               label="Kata Sandi"
               type="password"
               onChange={handleChangeDataRegister}
@@ -81,7 +81,7 @@ export default function AlertDialogRegister() {
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
             />
-            <TextField
+            {/* <TextField
               
               margin="dense"
               id="password2"
@@ -91,7 +91,7 @@ export default function AlertDialogRegister() {
               inputProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input text
               InputLabelProps={{style: {fontFamily: `'Poppins', sans-serif`}}} // font size of input label
               fullWidth
-            />
+            /> */}
           </DialogContent>
           <DialogActions>
             <button onClick={handleClose} className="cancel-button" color="primary">
