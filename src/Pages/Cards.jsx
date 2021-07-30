@@ -117,11 +117,11 @@ const Cards = (props) => {
                     </a>
                 </CardContent>
                
-                {/* <CardMedia
+                <CardMedia
                     className="media"
                     image={props.content_image}
-                /> */}
-                <AlertImage />
+                />
+                {/* <AlertImage /> */}
                 
                 <CardActions disableSpacing>
                     <IconButton 

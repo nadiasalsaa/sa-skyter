@@ -15,7 +15,7 @@ export default function MyHeader() {
     const classes = useStyles();
     let history = useHistory();
     const redirect = () => {
-        history.push('/login')
+        history.push('/')
     }
     return (
         <div>
