@@ -40,7 +40,7 @@ export default function AlertDialogNewPost() {
       {/* <button className="akun-baru-button" variant="outlined" color="primary" onClick={handleClickOpen}>
         Buat Post Baru
       </button> */}
-      <Card className="card" onClick={handleClickOpen}>
+      <div className="card" onClick={handleClickOpen}>
         <CardHeader className="post"
             action={
               <IconButton aria-label="settings">
@@ -53,7 +53,7 @@ export default function AlertDialogNewPost() {
           }
           
             />
-      </Card>
+      </div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <ThemeProvider>
           <p id="form-dialog-title" className="form-dialog-title">Buat Post Baru</p>

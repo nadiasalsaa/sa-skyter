@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+.box{
+  margin-top: 10px;
+  margin-left: 441px;
+  display: flex;
+  width: 40%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1.5px solid #f1f2f6;
+  background-color: white;
+  box-shadow: -1px 1px 4px 0px rgba(120, 130, 146, 0.5);
+}
+
+.notif{
+    margin: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.avatar{
+    border: 2px solid #e36387;
+    margin-left: 10px;
+    box-shadow: -1px 1px 4px 0px rgba(120, 130, 146, 0.5);
+    
+}
+
+.clickIt{
+    color:#203758;
+    cursor: pointer;
+}
+
+.clicked{
+    color: rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+ .box{
+     width: 90%;
+     margin: 10px;
+ }
+}

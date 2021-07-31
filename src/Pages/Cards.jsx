@@ -18,7 +18,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useHistory, useState, useEffect } from 'react-router-dom';
 import AlertLike from '../components/AlertLike';
-import AlertImage from '../components/AlertImage';
+
 
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -194,7 +194,7 @@ const Cards = (props) => {
 
                 </div>
                 )}
-                    <FormControl className={classes.margin}>
+                <FormControl className={classes.margin}>
                     <CardHeader className="commen"
                     avatar={
                         
@@ -209,7 +209,8 @@ const Cards = (props) => {
                     }
                     
                     />
-                    </FormControl>
+                </FormControl>
+               
             </Card>
         </div>
     )

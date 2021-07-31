@@ -1,0 +1,36 @@
+.header{
+    background-color: #6fcced;
+    width: 100%;
+    box-shadow: -1px 3px 4px 0px rgba(120, 130, 146, 0.5);
+    display: inline-flex;
+}
+
+.logo{
+    margin-left: 470px;
+    margin-top: 13px;
+    height: 40px;
+}
+.ban{
+    margin-left: 470px;
+
+}
+
+.avatar{
+    border: 2px solid #e36387;
+    margin-top: 13px;
+    margin-left: 10px;
+    box-shadow: -1px 1px 4px 0px rgba(120, 130, 146, 0.5);
+}
+@media only screen and (max-width: 768px) {
+    .header{
+        width: 100%;
+    }
+    .logo{
+        margin-left: 0%;
+    }
+    .ban{
+        margin-left: 600px;
+    }
+    
+    
+}

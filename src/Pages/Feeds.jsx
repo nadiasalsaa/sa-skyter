@@ -13,6 +13,7 @@ class Feeds extends Component {
     comments: [
       
     ],
+    
   }
   componentDidMount() {
     this.fetchPosts();

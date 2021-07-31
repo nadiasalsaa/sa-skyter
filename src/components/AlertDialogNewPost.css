@@ -40,11 +40,13 @@
     margin-left: 20px;
 }
 .card{
+    background-color: white;
     margin-top: 10px;
     margin-left: 441px;
-    width: 622px;
+    width: 40%;
     border-radius: 8px;
     border: 1.5px solid rgba(241, 242, 246, 1);
+    box-shadow: -1px 2px 4px 0px rgba(120, 130, 146, 0.5);
     
 }
 
@@ -57,6 +59,10 @@
     .post-button {
         padding: 5px 30px;
         margin-right: 10px;
+    }
+    .card{
+        width: 90%;
+        margin: 10px 30px;
     }
 
     
