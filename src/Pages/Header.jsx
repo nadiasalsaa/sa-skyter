@@ -7,6 +7,7 @@ import Badge from '@material-ui/core/Badge';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
 import logo from './asset/image/shazam.png';
+import { Link } from "react-router-dom";
 import './asset/Feeds.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -40,16 +41,16 @@ export default function Header() {
             <AppBar position="static" background-color="#6fcced" className="hd">
                 <Toolbar>
                     
-                <img src={logo} alt="logo" className="logo" />
+                <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
                 <div className={classes.grow} />
                 <div className="ban">
                     
                     <IconButton aria-label="show 17 new notifications" color="inherit" >
                     <Badge badgeContent={17} color="secondary" className="notif">
-                        <NotificationsIcon />
+                    <Link to="/Notif"><NotificationsIcon /></Link>
                     </Badge>
                     </IconButton>
-                    <Avatar alt="Remy Sharp" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium" className="avap"/>
+                    <Link to="/MyProfile"><Avatar alt="Remy Sharp" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium" className="avap"/></Link>
 
                     
                 </div>

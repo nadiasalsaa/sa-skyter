@@ -9,6 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 import logo from './asset/image/shazam.png';
 import './asset/Feeds.css';
 import MyHome from './MyHome';
+import Header from './Header';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -37,32 +38,7 @@ export default function MyProfile() {
     const classes = useStyles();
     return (
         <div className={classes.grow}>
-      <AppBar position="static" background-color="#6fcced" className="hd">
-        <Toolbar>
-            
-          <img src={logo} alt="logo" className="logo" />
-          <div className={classes.grow} />
-          <div className="ban">
-            
-            <IconButton aria-label="show 17 new notifications" color="inherit" >
-              <Badge badgeContent={17} color="secondary" className="notif">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <Avatar alt="Remy Sharp" src="https://pbs.twimg.com/media/EeaVneQU8AAHgaW?format=jpg&name=medium" className="avap"/>
-
-            
-          </div>
-          {/* <div className={classes.sectionMobile}>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-                <Badge badgeContent={17} color="secondary">
-                    <NotificationsIcon />
-                </Badge>
-            </IconButton>
-          </div> */}
-        </Toolbar>
-        
-      </AppBar>
+      <Header />
       <MyHome />
       
         

@@ -24,6 +24,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Link } from "react-router-dom";
 
 
 
@@ -154,7 +155,7 @@ export default function Cards() {
                     }
                     subheader={
                         <IconButton aria-label="Exit" className="exit">
-                            <ExitToAppIcon />
+                            <Link to="/login"><ExitToAppIcon /></Link>
                         </IconButton>
                     }
 
